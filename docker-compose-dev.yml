@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    table_of_elements_test:
+        build:
+            context: ./project
+            dockerfile: Dockerfile.dev
+        ports:
+            - "8888:8888"
+        volumes:
+            - "./project/main/:/app"

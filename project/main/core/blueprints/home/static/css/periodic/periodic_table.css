@@ -1,0 +1,130 @@
+body {
+    background-color: #000000;
+}
+
+h1, h3 {
+    margin: 0;
+    padding: 0;
+    color: #F0FAFA;
+}
+
+
+.actinide {
+    background-color: #583157;
+}
+
+.alkali-metal {
+    background-color: #2267C8;
+}
+
+.alkaline-earth-metal {
+    background-color: #9F669F;
+}
+
+.lanthanide {
+    background-color: #094E75;
+}
+
+.metalloid {
+    background-color: #F4B459;
+}
+
+.noble-gas {
+    background-color: #378E90;
+}
+
+.nonmetal {
+background-color: #8EDEDE;
+}
+
+.post-transition-metal {
+    background-color: #F26D4B;
+}
+
+
+
+
+.transition-metal {
+    background-color: #F43C52;
+}
+
+.unknown {
+    background-color: #849897;
+}
+
+
+#container {
+   /*width: 75%;*/
+    margin: 100px;
+}
+
+
+
+#periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    grid-template-areas:
+    "H  .  ho ho ho ho ho ho ho ho ho ho  .  .  .  .  .  He"
+    "Li Be ho ho ho ho ho ho ho ho ho ho  B  C  N  O  F  Ne"
+    "Na Mg ho ho ho ho ho ho ho ho ho ho  Al Si P  S  Cl Ar"
+    "K  Ca Sc Ti V  Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr"
+    "Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I  Xe"
+    "Cs Ba .  Hf Ta W  Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn"
+    "Fr Ra .  Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og"
+    ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+    ".  .  La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu ."
+    ".  .  Ac Th Pa U  Np Pu Am Cm Bk Cf Es Fm Md No Lr .";
+}
+
+
+.element {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ho {
+    display: grid;
+    grid-area: ho;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    grid-template-areas:
+            "el el el  number number    app        app     app    density density density"
+            "el el el  name   name      melt       melt    melt   mass mass mass     "
+            "el el el  phase  phase     boil       boil    boil cat cat cat"
+;
+}
+
+#ho p {
+    color: #F0FAFA;
+    margin: 0;
+    padding: 0;
+}
+
+#ho h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.element_symbol {
+    display: flex;
+    color: #F0FAFA;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-area: el;
+}
+
+.app {
+    grid-area: app;
+     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

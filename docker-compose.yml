@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+    table_of_elements:
+        build:
+            context: ./project
+        volumes:
+            - "./project/main/:/app"
+
+        labels:
+          - "traefik.backend=table_of_elements"
+          - "traefik.frontend.rule=Host: halcyonramirez.com"
+          - "traefik.docker.network=web"
+          - "traefik.port=7777"
+          - "traefik.enable=true"
+
+
+        networks:
+            - web
+
+
+
+networks:
+  web:
+    external: true

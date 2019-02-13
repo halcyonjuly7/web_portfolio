@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/home_bundle.css') }}"/>
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="periodic-table">
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='dist/home_bundle.js') }}"></script>
+{% endblock %}
