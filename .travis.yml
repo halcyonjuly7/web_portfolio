@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - cd /project
+  - cd project/
 
 install:
   - docker-compose -f docker-compose-dev up -d
