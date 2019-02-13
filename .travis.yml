@@ -2,6 +2,9 @@ sudo: required
 services:
   - docker
 
+before_install:
+  - cd /project
+
 install:
   - docker-compose -f docker-compose-dev up -d
 
