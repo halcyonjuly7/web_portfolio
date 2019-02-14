@@ -38,10 +38,3 @@ services:
 networks:
     web:
         external: true
-
-
-
-
-networks:
-  web:
-    external: true
