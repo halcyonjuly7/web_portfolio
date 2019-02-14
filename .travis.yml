@@ -5,9 +5,9 @@ branches:
 services:
   - docker
 install:
-  - docker-compose -f docker-compose.yml up -d
+  - docker-compose -f docker-compose-dev.yml up -d
 script:
-  - docker-compose -f docker-compose.yml exec table_of_elements find -name "__pyc*" -exec rm -rf '{}' \;
-  - docker-compose -f docker-compose.yml exec table_of_elements pytest /app/tests -v
+  - docker-compose -f docker-compose-test.yml exec table_of_elements_test find -name "__pyc*" -exec rm -rf '{}' \;
+  - docker-compose -f docker-compose-test.yml exec table_of_elements_test pytest /app/tests -v
 after_success:
   - bash ./deploy.sh
