@@ -4,6 +4,10 @@ branches:
   - master
 services:
   - docker
+before_install:
+  - openssl aes-256-cbc -K $encrypted_ffdb65824e38_key -iv $encrypted_ffdb65824e38_iv -in travis_rsa.enc -out travis_rsa -d
+  - chmod 600 travis_rsa
+  - mv travis_rsa ~/.ssh/id_rsa
 install:
   - docker-compose -f docker-compose-dev.yml up -d
 script:
