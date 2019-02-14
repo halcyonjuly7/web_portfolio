@@ -1,14 +1,21 @@
+language: python
 sudo: required
+addons:
+  ssh_known_hosts: halcyonramirez.com
+branches:
+  only:
+  - master
 services:
-  - docker
-
-
+- docker
+before_install:
+  - openssl aes-256-cbc -K $encrypted_ffdb65824e38_key -iv $encrypted_ffdb65824e38_iv
+    -in travis_rsa.enc -out travis_rsa -d
+  -
 install:
   - docker-compose -f docker-compose-dev.yml up -d
-
-
 script:
-  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name "*.pyc" -delete
-  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test pytest /app/tests -v
-
-
+  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name
+  "*.pyc" -delete
+  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test pytest /app/tests
+  -v
+after_success:
