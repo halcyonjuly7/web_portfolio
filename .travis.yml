@@ -1,7 +1,5 @@
 language: python
 sudo: required
-addons:
-  ssh_known_hosts: halcyonramirez.com
 branches:
   only:
   - master
