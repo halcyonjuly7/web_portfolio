@@ -14,6 +14,9 @@ services:
           - "traefik.port=7777"
           - "traefik.enable=true"
 
+        depends_on:
+            - traefik
+
 
         networks:
             - web
