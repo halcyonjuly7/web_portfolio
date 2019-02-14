@@ -9,5 +9,6 @@ install:
 script:
   - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name "__pycache__" -prune -exec rm -rf '{}' \;
   - docker-compose -f docker-compose-dev.yml exec table_of_elements_test pytest /app/tests -v
+  - find -name "__pycache__" -prune -exec rm -rf '{}' \;
 after_success:
   - bash ./deploy.sh
