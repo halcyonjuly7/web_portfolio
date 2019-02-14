@@ -12,8 +12,7 @@ before_install:
 install:
   - docker-compose -f docker-compose-dev.yml up -d
 script:
-  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name
-  "*.pyc" -delete
+  - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name "*.pyc" -delete
   - docker-compose -f docker-compose-dev.yml exec table_of_elements_test pytest /app/tests
   -v
 after_success:
