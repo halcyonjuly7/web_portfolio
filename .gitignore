@@ -117,7 +117,7 @@ dmypy.json
 .pyre/
 node_modules
 
-travis_rsa.enc
 travis_rsa.pub
+travis_rsa
 
 __pycache__
