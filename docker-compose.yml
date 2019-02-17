@@ -4,9 +4,6 @@ services:
     table_of_elements:
         build:
             context: ./project
-        volumes:
-            - "./project/main/:/app"
-
         labels:
           - "traefik.backend=table_of_elements"
           - "traefik.frontend.rule=Host: halcyonramirez.com"
