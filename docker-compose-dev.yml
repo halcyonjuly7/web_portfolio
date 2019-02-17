@@ -7,5 +7,5 @@ services:
             dockerfile: Dockerfile.dev
         ports:
             - "8888:8888"
-        volumes:
-            - "./project/main/:/app"
+#        volumes:
+#            - "./project/main/:/app"
