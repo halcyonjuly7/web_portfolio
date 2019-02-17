@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -x
 
-cd /root/web_portfolio
+cd /home/travis/web_portfolio
 tar -zxvf package.tgz -C . && \
 docker-compose up -d
