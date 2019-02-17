@@ -13,6 +13,9 @@ install:
 script:
   - docker-compose -f docker-compose-dev.yml exec table_of_elements_test find -name "__pycache__" -prune -exec rm -rf '{}' \;
   - docker-compose -f docker-compose-dev.yml exec table_of_elements_test pytest /app/tests -v
+
+
+after_script:
   - find -name "__pycache__" -prune -exec rm -rf '{}' \;
   - find -name ".pytest*" -prune -exec rm -rf '{}' \;
 after_success:
