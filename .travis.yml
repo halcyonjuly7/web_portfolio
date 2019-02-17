@@ -1,4 +1,6 @@
 sudo: required
+addons:
+  ssh_known_hosts: 74.207.236.236
 branches:
   only:
   - master
